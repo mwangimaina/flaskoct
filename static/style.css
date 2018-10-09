@@ -1,0 +1,93 @@
+      h1 {
+            color: white;
+            background-color: black;
+            font-family: Verdana,arial;
+            font-weight: bold;
+        }
+
+        h4{
+            color: brown;
+        }
+
+        p {
+            background-color: lightslategrey;
+            color: white;
+            margin-right: 5%;
+            margin-left: 5%;
+            border: chocolate 2px groove;
+            height:100px;
+        }
+
+        h2{
+            color: chocolate;
+            text-align: center;
+            font-size: medium;
+        }
+        a{
+            color: white;
+            background-color: chocolate;
+            padding: 1%;
+        }
+
+        a:hover{
+            background-color:lightslategrey;
+        }
+
+        ol {
+            color: green;
+        }
+
+
+        table{
+            background-color: green;
+        }
+
+
+        form {
+            color: green;
+            background-color: chocolate;
+        }
+
+
+        /*  Styling with IDs : ids we use a # */
+        #p1{
+            background-color: blue;
+            color: aqua;
+
+        }
+
+        #p2{
+            background-color: green;
+        }
+
+
+        #body1{
+            background-color: chartreuse;
+        }
+
+        #body2{
+            background-color: brown;.
+        }
+
+
+        #d1{
+            color: brown;
+        }
+
+        #d2{
+            color: chartreuse;
+        }
+
+        /*Style with classes : we a (.)
+           classes can be repeted in different tags
+        */
+
+       .a {
+           background-color: blue;
+           width: 10%;
+           height: 10%;
+       }
+
+       .b{
+           background-color:bisque ;
+       }

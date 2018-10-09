@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+     <link rel="stylesheet"
+          href="../static/bs/css/bootstrap.css">
+</head>
+<body>
+       <h3 class="jumbotron text-center">Messages Listings</h3>
+       <a href="/blog" class="btn btn-dark">POST BLOG</a>
+       <a href="/index2" class="btn btn-dark">MAIN SITE</a>
+       <br><br>
+
+       {% if session['userkey'] %}
+             <h5 class="text-right">
+                 <b>Welcome :</b> {{ session['userkey'] }}
+                 <a href="/logout" class="btn btn-dark">Logout</a>
+             </h5>
+       {% endif %}
+
+
+       <section class="row">
+           <div class="col-md-3">TODO</div>
+           <div class="col-md-6">
+                <h5 style="color: #c69500">{{ msg }}</h5>
+                {% for row in rows %}
+                    <b>{{ row[1] }}</b> <br>
+                    <i class="text-info">{{ row[2] }}</i>
+                    <p class="text-muted"> {{ row[3] }}</p>
+                    <p class="text-right">{{ row[4] }}</p>
+                    <p>  <a href="">Delete</a> |
+                        <a href="">Comment</a> |
+                        <a href="">Like</a></p>
+                    <hr>
+                {% endfor %}
+
+           </div>
+           <div class="col-md-3">TODO</div>
+       </section>
+
+</body>
+</html>

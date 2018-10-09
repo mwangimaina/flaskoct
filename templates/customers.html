@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+         <link rel="stylesheet"
+          href="../static/bs/css/bootstrap.css">
+</head>
+<body>
+     <h1 class="jumbotron text-center">Messages Portal</h1>
+     <a href="/blog">Back Home</a>
+
+         {% if session['userkey'] %}
+             <h5 class="text-right">
+                 <b>Welcome :</b> {{ session['userkey'] }}
+                 <a href="/logout" class="btn btn-dark">Logout</a>
+             </h5>
+       {% endif %}
+
+      <section class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-8">
+               <h4>{{ msg }}</h4>
+          <h4 >{{ msg2 }}</h4>
+
+               <table class="table table-light">
+                  <tr>
+                      <th>State</th>
+                      <th>Coverage</th>
+                      <th>Education</th>
+                       <th>Effect Date</th>
+                       <th>Employment</th>
+                       <th>Income</th>
+                  </tr>
+
+                 {% for row in rows %}
+                   <tr>
+                       <td>{{ row[1] }}</td>
+                       <td>{{ row[4] }}</td>
+                       <td>{{ row[5] }}</td>
+                       <td>{{ row[6] }}</td>
+                       <td>{{ row[7] }}</td>
+                       <td>{{ row[9] }}</td>
+                       <td><a href="">Pay</a></td>
+                       <td><a href="/deletecustomer/{{ row[0] }}" onclick="return confirm('Sure?')">Delete</a></td>
+                    </tr>
+               {% endfor %}
+               </table>
+
+
+          </div>
+          <div class="col-md-3">
+              <form action="/customers" method="post">
+                  <input type="text" name="Education"
+                         placeholder="Enter Name To Search">
+                  <input type="submit" class="btn btn-dark btn-sm"
+                  value="Search">
+              </form>
+          </div>
+      </section>
+
+</body>
+</html>
+

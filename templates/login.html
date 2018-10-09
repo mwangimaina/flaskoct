@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+         <link rel="stylesheet"
+          href="../static/bs/css/bootstrap.css">
+</head>
+<body>
+<section class="row">
+    <div class="col-md-7">
+        <img src="../static/images/2.jpg" alt=""
+        class="img-fluid">
+    </div>
+    <div class="col-md-5">
+        <h4 class="jumbotron">Login Area</h4>
+        <form action="/login" method="post">
+                  <input type="text" name="username"
+                         placeholder="Enter Username"
+                         class="form-control">
+                  <br>
+                  <input type="password" name="password"
+                         placeholder="Enter Password"
+                         class="form-control">
+
+                  <input type="submit" class="btn btn-dark btn-sm"
+                  value="Sign In">
+         </form>
+        {{ msg }} <br>
+        <a href="/register">Not Registered? Join Here</a>
+    </div>
+</section>
+</body>
+</html>
